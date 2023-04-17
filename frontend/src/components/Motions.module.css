@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  margin: 2rem auto;
+  width: 750px;
+  height: 200px;
+  background-color: rgb(167, 207, 167);
+  border-radius: 10px;
+  font-style: italic;
+  color: rgb(22, 18, 18);
+  box-sizing: inherit;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  -webkit-box-shadow: 11px 24px 39px 0px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 11px 24px 39px 0px rgba(0, 0, 0, 0.65);
+  box-shadow: 11px 24px 39px 0px rgba(0, 0, 0, 0.65);
+}
+
+.container h1 {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.container h2 {
+  font-size: 25px;
+}
