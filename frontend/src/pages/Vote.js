@@ -47,6 +47,7 @@ function Vote() {
         setData(response.data.data[0]);
       } catch (error) {
         setError(error.response.data.message);
+        console.log(error.message);
       }
     })();
   }, [token, navigate]);
