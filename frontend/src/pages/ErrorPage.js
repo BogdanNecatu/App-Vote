@@ -23,7 +23,7 @@ function ErrorPage() {
         <p>{message}</p>
       </PageContent>
       <Link to="/">
-        <button button style={{ height: '60px', width: '200px', fontSize: '24px' }}>
+        <button button style={{ height: '60px', width: '200px', fontSize: '25px' }}>
           Click to Go Home Page
         </button>
       </Link>
