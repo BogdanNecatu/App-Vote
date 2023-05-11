@@ -29,7 +29,9 @@ function ProposalsVoted() {
   return (
     <>
       <PageContent title="Voted Proposals:"></PageContent>
-      {error && <h2 style={{ textAlign: 'center' }}>Something went wrong... {error}</h2>}
+      {error && (
+        <h2 style={{ textAlign: 'center', color: 'black' }}>Something went wrong... {error}</h2>
+      )}
       <div>
         {data.map((data) => {
           const voturi = data.voturi || [];
