@@ -18,9 +18,11 @@ const Timer = (props) => {
     userDecode = jwt_decode(token);
     admin = userDecode.role;
   }
+
   const startVote = () => {
     props.startVote();
   };
+
   const startTimer = () => {
     socket.emit('start', true);
     startVote();

@@ -96,7 +96,7 @@ const ButoaneVotare = (props) => {
       {rezultate ? (
         <WaitMessage
           title="Vote sent, please wait until the end of voting!!!"
-          children="        Thank you!!"
+          children="            Thank you!!"
         />
       ) : null}
       <div className={classes.container}>

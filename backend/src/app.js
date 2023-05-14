@@ -23,7 +23,6 @@ app.use((req, res, next) => {
 });
 
 // Routes
-
 app.use('/api/data', dataRouter);
 app.use('/api/users', userRouter);
 
