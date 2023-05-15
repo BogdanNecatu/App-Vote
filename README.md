@@ -1,1 +1,3 @@
-# App-Vote
+# App-Vote 2.0
+
+The technologies used in the project include ReactJS for the frontend, NodeJS and Express for the backend, and all connected to the database with MongoDB. It is a real-time voting application for various questions/proposals created by the administrator from their own account. The project includes authentication with JWT token and encryption with bcrypt. There are users with different roles, where the admin creates the questions and saves them in the database. Each user must choose from 3 voting options by making a PATCH request to the server, with a timer activated by the admin to delimit the voting deadline. After the time is up, the votes are collected and the voting result, the number of voters, and the other voted proposals with their results are displayed.
