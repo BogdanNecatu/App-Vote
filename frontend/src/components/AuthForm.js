@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
+import jwt_decode from 'jwt-decode';
 
 import classes from './AuthForm.module.css';
 function AuthForm() {
@@ -14,7 +15,7 @@ function AuthForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const userData = {
+    let userData = {
       email,
       password,
     };
@@ -27,8 +28,10 @@ function AuthForm() {
 
       if (response.status === 200) {
         alert('User successfully connected');
+
         setEmail('');
         setPassword('');
+
         const token = response.data.token;
 
         localStorage.setItem('token', token);
@@ -36,6 +39,21 @@ function AuthForm() {
         expiration.setHours(expiration.getHours() + 1);
         localStorage.setItem('expiration', expiration.toISOString());
         // console.log(`Token created:${token}, Expiration date:${expiration.toISOString()}`);
+
+        // const connected = await axios.post('http://localhost:4000/api/connected'+);
+
+        if (token) {
+          const userDecode = jwt_decode(token);
+          const id = userDecode.id;
+          // const customObjectId = new ObjectId();
+          // const _id = customObjectId.toString();
+          // const name = userDecode.name;
+          // const role = userDecode.role;
+
+          const userIsLive = { connectedLive: true };
+          const res = await axios.patch('http://localhost:4000/api/users/' + id, userIsLive);
+          console.log(res);
+        }
 
         navigate('/');
         window.location.reload();

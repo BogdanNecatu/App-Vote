@@ -34,10 +34,25 @@ function NewUserForm() {
         alert('Something went wrong !!');
       }
     } catch (error) {
-      setError(` Please check the input fields. ${error.message}!   `);
-      console.log(error.response.data);
+      // setError(` Please check the input fields. ${error.message}!   `);
+      setError(error.response.data);
     }
   };
+  // console.log(error);
+
+  // const showerrors = (e) => {
+  //   const startTag = '<pre>';
+  //   const endTag = '</pre>';
+  //   const startIndex = e.indexOf(startTag) + startTag.length;
+  //   const endIndex = e.indexOf(endTag);
+  //   const errorText = e.substring(startIndex, endIndex);
+
+  //   // Split the error message into individual errors
+  //   const errorList = errorText.split(',');
+
+  //   // Trim and clean up each error message
+  //   return errorList.map((error) => error.trim().replace(/<br>/g, ''));
+  // };
 
   return (
     <div className={classes.container}>

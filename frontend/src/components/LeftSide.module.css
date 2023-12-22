@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  position: absolute;
+  margin-left: 100px;
+  top: 300px;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+
+  background: -moz-radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 19, 66, 1) 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 19, 66, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 19, 66, 1) 100%);
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 19, 66, 1) 100%);
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 19, 66, 1) 100%);
+  border-radius: 10px;
+  -webkit-box-shadow: 11px 24px 39px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 11px 24px 39px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 11px 24px 39px 0px rgba(0, 0, 0, 0.75);
+}

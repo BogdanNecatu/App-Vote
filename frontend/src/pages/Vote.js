@@ -63,11 +63,7 @@ function Vote() {
         {token && <Motions key={data._id} title={data.title} intrebare={data.description} />}
       </div>
       {voteStart === false && (
-        <WaitMessage
-          title="Voting will start immediately !"
-          children="
-        Thank you!"
-        />
+        <WaitMessage title="Voting will start immediately !" children="Thank you!" />
       )}
       {token && voteStart && <ButoaneVotare dataId={data._id} data={data} userId={userId} />}
     </React.Fragment>

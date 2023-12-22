@@ -40,6 +40,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: 'user',
   },
+  connectedLive: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 //.pre are loc exact dupa ce datele au fost introduse si pana are loc salvarea lor, pentru asta aici trebuie incriptata pass

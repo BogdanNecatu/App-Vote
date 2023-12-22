@@ -10,9 +10,7 @@ function HomePage() {
 
   return (
     <>
-      <PageContent title="Welcome!">
-        <h3>The voting application is available </h3>
-      </PageContent>
+      <PageContent title="Welcome!">The voting application is available</PageContent>
 
       <Outlet />
     </>

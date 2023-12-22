@@ -22,6 +22,7 @@ io.on('connection', (socket) => {
   socket.on('start', (data) => {
     socket.broadcast.emit('recieved_message', data);
   });
+
   socket.on('disconnect', () => {
     console.log('A user disconnected');
   });
